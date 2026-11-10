@@ -32,10 +32,17 @@ jobs:
           cat << 'EOF' > API_KEYS
           APP_ID = 6
           APP_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+          MAPS_V2_API = 
           SIGNING_KEY_STORE_PASSWORD = ghostgram2026
           SIGNING_KEY_ALIAS = ghostgram
           SIGNING_KEY_PASSWORD = ghostgram2026
           EOF
+
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r21e
+          link-to-sdk: true
 
       - name: Generate Signing Keystore
         run: |
@@ -86,8 +93,8 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build Ghostgram Universal APK
-        run: ./gradlew assembleAfatRelease --stacktrace
+      - name: Build Ghostgram APKs
+        run: ./gradlew assembleArm64Release assembleAfatRelease --stacktrace
 
       - name: Collect APKs
         run: |

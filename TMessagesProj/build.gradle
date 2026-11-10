@@ -94,12 +94,12 @@ android {
         versionName APP_VERSION_NAME
 
         // Obtain your own keys at: https://core.telegram.org/api/obtaining_api_id
-        buildConfigField 'int', 'APP_ID', localProperties.getProperty("APP_ID")
-        buildConfigField 'String', 'APP_HASH', localProperties.getProperty("APP_HASH")
+        buildConfigField 'int', 'APP_ID', (localProperties.getProperty("APP_ID") ?: "6")
+        buildConfigField 'String', 'APP_HASH', (localProperties.getProperty("APP_HASH") ?: '"eb06d4abfb49dc3eeb1aeb98ae0f581e"')
         buildConfigField 'String', 'AYU_VERSION', '"' + new Date().format("yyyyMMdd") + '"'
 
         // Google Console: https://console.cloud.google.com/google/maps-apis/credentials
-        resValue 'string', 'MAPS_V2_API', localProperties.getProperty("MAPS_V2_API")
+        resValue 'string', 'MAPS_V2_API', (localProperties.getProperty("MAPS_V2_API") ?: "")
 
         externalNativeBuild {
             cmake {
