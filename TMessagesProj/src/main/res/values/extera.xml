@@ -13,11 +13,11 @@
 
 <resources>
     <string name="exteraAppName" translatable="false">Ghostgram</string>
-    <string name="Preferences">exteraGram Preferences</string>
+    <string name="Preferences">Ghostgram Preferences</string>
 
     <!-- Main Menu -->
     <string name="Links">Links</string>
-    <string name="AboutExteraDescription">Experimental Telegram client based on Official Sources!</string>
+    <string name="AboutExteraDescription">Ghostgram client with Ghost Mode, Anti-Recall and enhanced privacy!</string>
     <string name="Channel">Channel</string>
     <string name="Crowdin">Translate</string>
     <string name="SourceCode">Source Code</string>
@@ -156,7 +156,7 @@
     <string name="RememberLastUsedCamera">Remember last used Camera</string>
     <string name="RememberLastUsedCameraInfo">When recording video messages, the last used camera will be selected.</string>
     <string name="PauseOnMinimize">Auto-Pause</string>
-    <string name="PauseOnMinimizeInfo">Pauses a video playback when device is locked or exteraGram is minimized.</string>
+    <string name="PauseOnMinimizeInfo">Pauses a video playback when device is locked or Ghostgram is minimized.</string>
     <string name="DisablePlayback">Disable Playback</string>
     <string name="DisablePlaybackInfo">Disables playback when volume button is pressed.</string>
 
@@ -201,7 +201,7 @@
 
     <!-- Other -->
     <string name="RestartRequired">Restart the App to take effect.</string>
-    <string name="ResetSettingsBulletin">**exteraGram** Preferences have been reset.</string>
+    <string name="ResetSettingsBulletin">**Ghostgram** Preferences have been reset.</string>
     <string name="UserNotFound">User with this **ID** not found.</string>
     <string name="PhotoCopied">Photo copied to clipboard.</string>
 

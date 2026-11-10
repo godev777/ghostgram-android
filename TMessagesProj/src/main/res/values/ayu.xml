@@ -47,7 +47,7 @@
   <string name="RegexFiltersAddDescription">You can use site <![CDATA[<a href="https://regex101.com">regex101.com</a>]]> to fully test your regular expression.
     You can also use plain text, but don\'t forget to escape brackets.</string>
   <string name="RegexFiltersAddError">Regex syntax error</string>
-  <string name="AyuSyncHeader">AyuSync</string>
+  <string name="AyuSyncHeader">GhostSync</string>
   <string name="AyuSyncStatusTitle">Sync status</string>
   <string name="AyuSyncStatusOk">connected</string>
   <string name="AyuSyncStatusErrorDisconnected">disconnected</string>
@@ -70,7 +70,7 @@
   <string name="AyuSyncOpenPreferences">Open preferences</string>
   <string name="AyuSyncDownloadAgent">Download agent</string>
   <string name="WALMode">Enable WAL mode</string>
-  <string name="ClearAyuDatabase">Clear Ayu Database</string>
+  <string name="ClearAyuDatabase">Clear Ghostgram Database</string>
   <string name="ClearAyuDatabaseNotification">Ghostgram database cleared</string>
   <string name="EraseLocalDatabase">Erase Local Database</string>
   <string name="BetaFeatures">Beta features</string>

@@ -94,7 +94,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Ghostgram APKs
-        run: ./gradlew assembleArm64Release assembleAfatRelease --stacktrace
+        run: ./gradlew assembleArm64Release --stacktrace
 
       - name: Collect APKs
         run: |
