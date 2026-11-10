@@ -138,10 +138,18 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("config/extera.jks")
-            storePassword localProperties.getProperty("SIGNING_KEY_STORE_PASSWORD")
-            keyAlias localProperties.getProperty("SIGNING_KEY_ALIAS")
-            keyPassword localProperties.getProperty("SIGNING_KEY_PASSWORD")
+            def keyStoreFile = file("config/ghostgram.jks")
+            if (keyStoreFile.exists()) {
+                storeFile keyStoreFile
+                storePassword "ghostgram2026"
+                keyAlias "ghostgram"
+                keyPassword "ghostgram2026"
+            } else if (file("config/extera.jks").exists() && localProperties.getProperty("SIGNING_KEY_STORE_PASSWORD") != null) {
+                storeFile file("config/extera.jks")
+                storePassword localProperties.getProperty("SIGNING_KEY_STORE_PASSWORD")
+                keyAlias localProperties.getProperty("SIGNING_KEY_ALIAS")
+                keyPassword localProperties.getProperty("SIGNING_KEY_PASSWORD")
+            }
         }
     }
 
@@ -215,7 +223,7 @@ android {
             def formattedDate = date.format('ddMMyyyy')
             def abi = abis.get(variant.productFlavors.get(0).abiVersionCode)
 
-            outputFileName = "ayuGram-${buildType}${abi}-${formattedDate}.apk"
+            outputFileName = "Ghostgram-${buildType}${abi}-${formattedDate}.apk"
             output.versionCodeOverride = defaultConfig.versionCode * (isPmBuild == "true" ? 100 : 10) + variant.productFlavors.get(0).abiVersionCode
         }
     }
